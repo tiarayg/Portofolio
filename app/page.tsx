@@ -1,9 +1,9 @@
 import CTA from "@/components/CTA";
-import Hero from "@/components/Hero";
-import HowIWork from "@/components/HowIWork";
-import Projects from "@/components/Projects";
-import Services from "@/components/Services";
-import Skills from "@/components/Skills";
+import Hero from "@/components/works/Hero";
+import HowIWork from "@/components/works/HowIWork";
+import Projects from "@/components/works/Projects";
+import Services from "@/components/works/Services";
+import Skills from "@/components/works/Skills";
 
 export default function Home() {
   return (
