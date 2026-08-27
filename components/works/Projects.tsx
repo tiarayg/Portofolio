@@ -9,7 +9,7 @@ const projects = [
     slug: "stylemate",
     title: "Stylemate",
     image: "/stylemate/stylemate.png",
-    tags: ["Stylemate", "story", "Documentation"],
+    tags: ["Stylemate", "Story", "Documentation"],
   },
   {
     id: 2,
@@ -20,35 +20,34 @@ const projects = [
   },
   {
     id: 3,
-    slug: "project-three",
-    title: "Project Three",
-    image: "/projects/project-3.jpg",
-    tags: ["Branding", "Web design", "Development"],
+    slug: "dec-ai",
+    title: "Decodes AI",
+    image: "/dec-ai/dec-ai.png",
+    tags: ["Decodes AI", "Story", "Documentation"],
   },
 ];
 
 export default function Projects() {
   return (
     <section className="relative min-h-screen w-full overflow-hidden">
-      
-
       {/* CONTAINER */}
       <div className="relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x border-black/[0.08] bg-[#fafafa]">
         
         {/* TAGLINE */}
         <div className="border-y border-black/[0.12] bg-[#fafafa] px-[18px] py-[22px] sm:px-[28px] sm:py-[24px]">
           <p className="font-serif text-[18px] italic leading-[1.35] tracking-[-.3px] text-black/55 sm:text-[20px] md:text-[21px]">
-            1+ year in frontend & mobile development. Building modern, performant interfaces with clean code and high visual fidelity.
+            1+ year in frontend & mobile development. Building modern,
+            performant interfaces with clean code and high visual fidelity.
           </p>
         </div>
 
         {/* PROJECT CONTENT */}
         <div className="bg-[#fafafa] px-[18px] py-[18px] sm:px-[28px] sm:py-[24px]">
           
-          {/* FEATURED */}
+          {/* FEATURED — STYLEMATE */}
           <ProjectCard project={projects[0]} featured />
 
-          {/* SECONDARY */}
+          {/* SECONDARY — DECODES AI + PROJECT 3 */}
           <div className="mt-3 grid grid-cols-1 gap-3 md:grid-cols-2">
             <ProjectCard project={projects[1]} />
             <ProjectCard project={projects[2]} />
@@ -56,14 +55,18 @@ export default function Projects() {
 
           {/* VIEW ALL */}
           <div className="flex justify-center py-[38px]">
-            <Link href="/projects" className="group inline-flex items-center gap-3 rounded-full border border-black/[0.12] bg-[#f5f5f5] px-5 py-3 text-[14px] text-black shadow-[0_1px_3px_rgba(0,0,0,.08)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white hover:shadow-[0_5px_18px_rgba(0,0,0,.1)]">
+            <Link
+              href="/projects"
+              className="group inline-flex items-center gap-3 rounded-full border border-black/[0.12] bg-[#f5f5f5] px-5 py-3 text-[14px] text-black shadow-[0_1px_3px_rgba(0,0,0,.08)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white hover:shadow-[0_5px_18px_rgba(0,0,0,.1)]"
+            >
               <span>View all projects</span>
-              <span className="text-[16px] transition-transform duration-200 group-hover:translate-x-1">→</span>
+
+              <span className="text-[16px] transition-transform duration-200 group-hover:translate-x-1">
+                →
+              </span>
             </Link>
           </div>
         </div>
-
-        
       </div>
     </section>
   );
@@ -81,8 +84,10 @@ function ProjectCard({
   featured?: boolean;
 }) {
   return (
-    <Link href={`/projects/${project.slug}`} className="group block overflow-hidden rounded-[14px] border border-black/[0.1] bg-white transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_10px_30px_rgba(0,0,0,.08)]">
-      
+    <Link
+      href={`/projects/${project.slug}`}
+      className="group block overflow-hidden rounded-[14px] border border-black/[0.1] bg-white transition-all duration-300 hover:-translate-y-[2px] hover:shadow-[0_10px_30px_rgba(0,0,0,.08)]"
+    >
       {/* IMAGE */}
       <div className="relative">
         <div className="relative aspect-video w-full overflow-hidden rounded-[10px] bg-[#f3ecff]">
@@ -123,10 +128,6 @@ function ProjectCard({
           <h3 className="font-serif text-[28px] font-normal leading-none tracking-[-1px] text-black sm:text-[30px]">
             {project.title}
           </h3>
-
-          <p className="mt-[10px] text-[13px] leading-[1.55] tracking-[-.1px] text-black/40">
-            View project
-          </p>
         </div>
 
         {/* ARROW */}

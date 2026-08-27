@@ -17,15 +17,19 @@ export default function ProjectImage({ src, alt }: ProjectImageProps) {
 
         {/* IMAGE AREA */}
         <div className="px-[18px] py-[30px] sm:px-[28px] sm:py-[34px] md:px-[30px] md:py-[30px]">
-          <div className="relative aspect-[16/7] w-full overflow-hidden rounded-[18px] bg-[#eee] sm:rounded-[20px]">
+          
+          {/* IMAGE */}
+          <div className="relative aspect-video w-full overflow-hidden rounded-[18px] bg-[#eee] sm:rounded-[20px]">
             <Image
               src={src}
               alt={alt}
               fill
+              priority
               sizes="(max-width:768px) calc(100vw - 84px),1140px"
               className="object-cover"
             />
           </div>
+
         </div>
 
         {/* BOTTOM LINE */}
