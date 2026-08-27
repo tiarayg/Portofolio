@@ -7,12 +7,10 @@ type ProjectImageProps = {
 
 export default function ProjectImage({ src, alt }: ProjectImageProps) {
   return (
-    <section className="relative overflow-hidden bg-[#fafafa]">
-      {/* GRID */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,.055)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,.055)_1px,transparent_1px)] bg-[size:12px_12px]" />
-
+    <section className="relative overflow-hidden">
+      
       {/* CONTAINER */}
-      <div className="relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-white">
+      <div className="mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-[#fafafa]">
         
         {/* TOP LINE */}
         <div className="border-t border-black/[0.12]" />

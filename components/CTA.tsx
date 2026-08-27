@@ -15,7 +15,7 @@ export default function CTA() {
   const isStory = pathname.startsWith("/story");
 
   return (
-    <section className="relative w-full overflow-hidden pt-6">
+    <section className="relative w-full overflow-hidden">
       {/* MAIN PANEL */}
       <div className={`relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x ${isStory ? "border-white/[0.12] bg-black text-white" : "border-black/[0.08] bg-[#fafafa] text-black"}`}>
 
@@ -57,9 +57,6 @@ export default function CTA() {
             </div>
           </div>
         </div>
-
-        {/* BOTTOM BORDER */}
-        <div className={`border-b-2 ${isStory ? "border-white/[0.18]" : "border-black"}`} />
       </div>
     </section>
   );

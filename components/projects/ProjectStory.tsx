@@ -4,14 +4,16 @@ type ProjectStoryProps = {
   tools: string[];
 };
 
-export default function ProjectStory({ paragraphs, services, tools }: ProjectStoryProps) {
+export default function ProjectStory({
+  paragraphs,
+  services,
+  tools,
+}: ProjectStoryProps) {
   return (
-    <section className="relative overflow-hidden bg-[#fafafa]">
-      {/* GRID */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,.055)_1px,transparent_1px),linear-gradient(to_bottom,rgba(0,0,0,.055)_1px,transparent_1px)] bg-[size:12px_12px]" />
-
+    <section className="relative overflow-hidden">
+      
       {/* CONTAINER */}
-      <div className="relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-white">
+      <div className="relative mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-[#fafafa]">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr]">
           
           {/* STORY */}
@@ -22,7 +24,10 @@ export default function ProjectStory({ paragraphs, services, tools }: ProjectSto
 
             <div className="mt-[30px] max-w-[800px] space-y-[24px]">
               {paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-[15px] leading-[1.55] tracking-[-.15px] text-black/85 sm:text-[16px]">
+                <p
+                  key={index}
+                  className="text-[15px] leading-[1.55] tracking-[-.15px] text-black/85 sm:text-[16px]"
+                >
                   {paragraph}
                 </p>
               ))}
@@ -60,7 +65,7 @@ export default function ProjectStory({ paragraphs, services, tools }: ProjectSto
           </div>
         </div>
 
-        {/* BOTTOM LINE */}
+        {/* BOTTOM BORDER */}
         <div className="border-b border-black/[0.12]" />
       </div>
     </section>

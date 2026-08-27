@@ -14,24 +14,15 @@ export default function ProjectDetailHero({
   logo,
 }: ProjectDetailHeroProps) {
   return (
-    <section className="relative min-h-[540px] overflow-hidden bg-[#fafafa] text-black">
-      {/* GRID */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          backgroundImage: `linear-gradient(to right,rgba(0,0,0,.055) 1px,transparent 1px),linear-gradient(to bottom,rgba(0,0,0,.055) 1px,transparent 1px)`,
-          backgroundSize: "12px 12px",
-        }}
-      />
+    // SECTION TRANSPARAN → GRID DARI LAYOUT TETAP TERLIHAT
+    <section className="relative min-h-[530px] overflow-hidden text-black">
+      
+      {/* CANVAS / ISI HERO → PAKAI BG FAF AFA */}
+      <div className="relative mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-[#fafafa]">
 
-      {/* CANVAS */}
-      <div className="relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08]">
+        {/* NAVBAR */}
+        <div className="flex h-[68px] items-center justify-between border-b border-black/[0.10] px-[18px] sm:px-[28px] md:px-[30px]">
 
-        {/* ================================================
-            NAVBAR
-        ================================================= */}
-        <div className="flex h-[68px] items-center justify-between border-b border-black/[0.10] bg-white px-[18px] sm:px-[28px] md:px-[30px]">
-          
           {/* BACK */}
           <Link
             href="/"
@@ -57,10 +48,8 @@ export default function ProjectDetailHero({
           </Link>
         </div>
 
-        {/* ================================================
-            HERO CONTENT
-        ================================================= */}
-        <div className="flex min-h-[465px] flex-col justify-end border-b border-black/[0.10] bg-white px-[28px] pb-[34px] pt-[120px] sm:px-[38px] sm:pb-[42px] md:px-[30px] lg:px-[30px]">
+        {/* HERO CONTENT */}
+        <div className="flex min-h-[465px] flex-col justify-end border-b border-black/[0.10] px-[28px] pb-[34px] pt-[120px] sm:px-[38px] sm:pb-[42px] md:px-[30px] lg:px-[30px]">
 
           {/* PROJECT TITLE */}
           <div className="flex items-center gap-[18px] sm:gap-[22px]">
