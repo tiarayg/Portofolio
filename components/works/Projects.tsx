@@ -25,6 +25,14 @@ const projects = [
     image: "/dec-ai/dec-ai.png",
     tags: ["Decodes AI", "Story", "Documentation"],
   },
+
+  {
+    id: 4,
+    slug: "hospital-intern",
+    title: "Hospital Intern",
+    image: "/hospital-intern/hospital.png",
+    tags: ["Hospital Intern", "Story", "Documentation"],
+  },
 ];
 
 export default function Projects() {
