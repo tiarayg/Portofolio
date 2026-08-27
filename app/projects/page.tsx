@@ -34,10 +34,10 @@ const projects = [
   },
   {
     id: 5,
-    slug: "project-five",
-    title: "Project Five",
-    image: "/projects/project-5.jpg",
-    tags: ["Coming Soon"],
+    slug: "libromate",
+    title: "Libromate",
+    image: "/libromate/libromate.png",
+    tags: ["Mobile App", "Flutter", "Laravel"],
   },
   {
     id: 6,
@@ -51,10 +51,8 @@ const projects = [
 export default function AllProjectsPage() {
   return (
     <main className="min-h-screen bg-[#fafafa] text-black">
-      
       {/* CONTAINER */}
       <div className="mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08]">
-
         {/* HEADER */}
         <section className="border-y border-black/[0.12] px-[18px] py-[50px] sm:px-[28px] sm:py-[70px]">
           <p className="text-[13px] uppercase tracking-[0.15em] text-black/45">
@@ -74,7 +72,6 @@ export default function AllProjectsPage() {
 
         {/* PROJECTS */}
         <section className="px-[18px] py-[18px] sm:px-[28px] sm:py-[24px]">
-          
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
             {projects.map((project) => (
               <ProjectCard
@@ -83,9 +80,7 @@ export default function AllProjectsPage() {
               />
             ))}
           </div>
-
         </section>
-
       </div>
     </main>
   );
