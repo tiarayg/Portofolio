@@ -41,10 +41,10 @@ const projects = [
   },
   {
     id: 6,
-    slug: "project-six",
-    title: "Project Six",
-    image: "/projects/project-6.jpg",
-    tags: ["Coming Soon"],
+    slug: "serelio",
+    title: "Serelio",
+    image: "/serelio/serelio.png",
+    tags: ["UI/UX Design", "Mobile App", "Mental Health"],
   },
 ];
 
@@ -53,6 +53,7 @@ export default function AllProjectsPage() {
     <main className="min-h-screen bg-[#fafafa] text-black">
       {/* CONTAINER */}
       <div className="mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08]">
+        
         {/* HEADER */}
         <section className="border-y border-black/[0.12] px-[18px] py-[50px] sm:px-[28px] sm:py-[70px]">
           <p className="text-[13px] uppercase tracking-[0.15em] text-black/45">
@@ -65,8 +66,8 @@ export default function AllProjectsPage() {
 
           <p className="mt-6 max-w-[600px] text-[15px] leading-[1.6] text-black/65 sm:text-[16px]">
             A collection of projects I&apos;ve worked on across frontend
-            development, mobile applications, web development, and AI-powered
-            experiences.
+            development, mobile applications, web development, UI/UX design,
+            and AI-powered experiences.
           </p>
         </section>
 
