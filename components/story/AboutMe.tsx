@@ -28,19 +28,45 @@ export default function AboutMe() {
             </h2>
 
             {/* STORY */}
-            <div className="mt-[40px] max-w-[650px] space-y-[30px]">
-              <p className="text-[15px] leading-[1.55] tracking-[-0.2px] text-white/85 sm:text-[16px]">
-                I started my journey with a curiosity for how ideas could be
-                turned into something people can actually see, use, and
-                experience. What began with simple experiments gradually grew
-                into a passion for building digital experiences.
+            <div className="mt-[40px] max-w-[650px] space-y-[26px]">
+              <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
+                Hi, I&apos;m{" "}
+                <span className="text-white">Tiara Yoga</span> — a young
+                developer who enjoys turning ideas into digital experiences.
+                I&apos;ve always been curious about how something that starts
+                as a simple idea can eventually become a website or application
+                that people can actually use.
               </p>
 
-              <p className="text-[15px] leading-[1.55] tracking-[-0.2px] text-white/85 sm:text-[16px]">
-                Today, I enjoy working across design and development, turning
-                ideas into thoughtful interfaces and products. I&apos;m always
-                exploring new ways to make digital experiences feel clearer,
-                more useful, and more human.
+              <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
+                That curiosity gradually led me into the world of frontend and
+                mobile development. I enjoy the process of taking an idea and
+                turning it into something real — building interfaces, creating
+                interactions, and making sure everything works smoothly across
+                different devices.
+              </p>
+
+              <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
+                Most of my journey has been focused on building web and mobile
+                applications. I enjoy working with modern frontend technologies
+                and exploring how different components can come together to
+                create an experience that feels simple, responsive, and useful.
+              </p>
+
+              <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
+                I&apos;m someone who enjoys learning through building. Every
+                project gives me the opportunity to explore something new,
+                improve my technical skills, and better understand how a digital
+                product comes together from the first idea to the final result.
+              </p>
+
+              <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
+                I&apos;m still growing, still learning, and still figuring out
+                new things every day. But that&apos;s also what I enjoy most
+                about this journey — there is always something new to explore,
+                build, and improve. With every project, I hope to keep becoming
+                a better developer while creating digital experiences that
+                people can genuinely enjoy using.
               </p>
             </div>
           </div>
@@ -78,8 +104,8 @@ function PolaroidStack() {
         {/* IMAGE */}
         <div className="h-[225px] w-full overflow-hidden bg-[#ddd] sm:h-[250px]">
           <img
-            src="/images/about-me.jpg"
-            alt="A personal moment"
+            src="/foto2.jpeg"
+            alt="Tiara Yoga"
             className="h-full w-full object-cover"
           />
         </div>

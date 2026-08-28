@@ -1,5 +1,6 @@
 "use client";
 
+import CTA from "@/components/CTA";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -50,12 +51,27 @@ const projects = [
 
 export default function AllProjectsPage() {
   return (
-    <main className="min-h-screen bg-[#fafafa] text-black">
+    <main className="relative min-h-screen text-black">
+
       {/* CONTAINER */}
-      <div className="mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08]">
-        
+      <div className="relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-[#fafafa]">
+
+        {/* NAVIGATION */}
+        <div className="flex h-[68px] items-center border-b border-black/[0.10] px-[18px] sm:px-[28px] md:px-[30px]">
+          <Link
+            href="/"
+            className="group inline-flex items-center gap-[7px] rounded-full border border-black/[0.10] bg-white px-[14px] py-[8px] text-[14px] shadow-[0_2px_5px_rgba(0,0,0,.06)] transition-all hover:-translate-x-[1px] hover:shadow-[0_4px_10px_rgba(0,0,0,.10)]"
+          >
+            <span className="text-[12px] text-black/50 transition-transform group-hover:-translate-x-[2px]">
+              ‹
+            </span>
+
+            <span>Back</span>
+          </Link>
+        </div>
+
         {/* HEADER */}
-        <section className="border-y border-black/[0.12] px-[18px] py-[50px] sm:px-[28px] sm:py-[70px]">
+        <section className="border-b border-black/[0.12] px-[18px] py-[50px] sm:px-[28px] sm:py-[70px]">
           <p className="text-[13px] uppercase tracking-[0.15em] text-black/45">
             Selected work
           </p>
@@ -82,6 +98,10 @@ export default function AllProjectsPage() {
             ))}
           </div>
         </section>
+
+        {/* CTA */}
+        <CTA />
+
       </div>
     </main>
   );

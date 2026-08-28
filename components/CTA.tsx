@@ -4,10 +4,26 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const socials = [
-  { name: "Instagram", href: "https://instagram.com/yourusername", icon: "instagram" },
-  { name: "LinkedIn", href: "https://linkedin.com/in/yourusername", icon: "linkedin" },
-  { name: "GitHub", href: "https://github.com/yourusername", icon: "github" },
-  { name: "Email", href: "mailto:your@email.com", icon: "email" },
+  {
+    name: "Instagram",
+    href: "https://www.instagram.com/tyara.yg?igsi=cTVkaGNyejcwN2U4",
+    icon: "instagram",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://www.linkedin.com/in/tiara-yoga-9028sp",
+    icon: "linkedin",
+  },
+  {
+    name: "GitHub",
+    href: "https://github.com/tiarayg",
+    icon: "github",
+  },
+  {
+    name: "Email",
+    href: "mailto:tiarapratiwi889@gmail.com",
+    icon: "email",
+  },
 ];
 
 export default function CTA() {
@@ -17,26 +33,54 @@ export default function CTA() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* MAIN PANEL */}
-      <div className={`relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x ${isStory ? "border-white/[0.12] bg-black text-white" : "border-black/[0.08] bg-[#fafafa] text-black"}`}>
-
+      <div
+        className={`relative z-10 mx-auto w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x ${
+          isStory
+            ? "border-white/[0.12] bg-black text-white"
+            : "border-black/[0.08] bg-[#fafafa] text-black"
+        }`}
+      >
         {/* CONTENT */}
         <div className={`grid grid-cols-1 md:grid-cols-2 ${isStory ? "bg-black" : "bg-[#fafafa]"}`}>
-
+          
           {/* LEFT */}
-          <div className={`border-b px-[18px] py-[30px] sm:px-[28px] sm:py-[34px] md:border-b-0 md:border-r md:px-[30px] md:py-[34px] ${isStory ? "border-white/[0.14] bg-black" : "border-black/[0.12] bg-[#fafafa]"}`}>
-            <p className={`font-serif text-[18px] italic tracking-[-.3px] sm:text-[19px] ${isStory ? "text-white/50" : "text-black/50"}`}>
+          <div
+            className={`border-b px-[18px] py-[30px] sm:px-[28px] sm:py-[34px] md:border-b-0 md:border-r md:px-[30px] md:py-[34px] ${
+              isStory
+                ? "border-white/[0.14] bg-black"
+                : "border-black/[0.12] bg-[#fafafa]"
+            }`}
+          >
+            <p
+              className={`font-serif text-[18px] italic tracking-[-.3px] sm:text-[19px] ${
+                isStory ? "text-white/50" : "text-black/50"
+              }`}
+            >
               Have a project in mind?
             </p>
 
             <div className="mt-[28px]">
-              <h2 className={`font-serif text-[32px] font-normal leading-[1] tracking-[-1.3px] sm:text-[36px] ${isStory ? "text-white" : "text-black"}`}>
+              <h2
+                className={`font-serif text-[32px] font-normal leading-[1] tracking-[-1.3px] sm:text-[36px] ${
+                  isStory ? "text-white" : "text-black"
+                }`}
+              >
                 Let&apos;s make
                 <br />
                 something great.
               </h2>
 
-              <Link href="mailto:your@email.com" className={`group mt-[24px] inline-flex items-center gap-3 rounded-full border px-[18px] py-[10px] text-[14px] shadow-[0_2px_5px_rgba(0,0,0,.08)] transition-all duration-200 hover:-translate-y-[1px] ${isStory ? "border-white/[.15] bg-[#f5f5f5] text-black hover:bg-white hover:shadow-[0_5px_15px_rgba(255,255,255,.12)]" : "border-black/[.12] bg-white text-black hover:shadow-[0_5px_15px_rgba(0,0,0,.10)]"}`}>
+              {/* EMAIL CTA */}
+              <Link
+                href="mailto:tiarapratiwi889@gmail.com"
+                className={`group mt-[24px] inline-flex items-center gap-3 rounded-full border px-[18px] py-[10px] text-[14px] shadow-[0_2px_5px_rgba(0,0,0,.08)] transition-all duration-200 hover:-translate-y-[1px] ${
+                  isStory
+                    ? "border-white/[.15] bg-[#f5f5f5] text-black hover:bg-white hover:shadow-[0_5px_15px_rgba(255,255,255,.12)]"
+                    : "border-black/[.12] bg-white text-black hover:shadow-[0_5px_15px_rgba(0,0,0,.10)]"
+                }`}
+              >
                 <span>Let&apos;s talk</span>
+
                 <span className="flex h-[22px] w-[22px] items-center justify-center rounded-full bg-black text-[12px] text-white transition-transform duration-200 group-hover:translate-x-1">
                   →
                 </span>
@@ -45,9 +89,15 @@ export default function CTA() {
           </div>
 
           {/* RIGHT */}
-          <div className={`px-[18px] py-[30px] sm:px-[28px] sm:py-[34px] md:px-[30px] md:py-[34px] ${isStory ? "bg-black" : "bg-[#fafafa]"}`}>
-            <p className={`font-serif text-[18px] italic tracking-[-.3px] sm:text-[19px] ${isStory ? "text-white/50" : "text-black/50"}`}>
-              Connect on socials
+          <div className={`px-[18px] py-[30px] sm:px-[28px] sm:py-[34px] md:px-[30px] md:py-[34px] ${
+            isStory ? "bg-black" : "bg-[#fafafa]"
+          }`}>
+            <p
+              className={`font-serif text-[18px] italic tracking-[-.3px] sm:text-[19px] ${
+                isStory ? "text-white/50" : "text-black/50"
+              }`}
+            >
+              Connect with me
             </p>
 
             <div className="mt-[28px] flex flex-wrap items-center gap-[12px]">
@@ -80,14 +130,24 @@ function SocialButton({
       title={name}
       target={icon === "email" ? undefined : "_blank"}
       rel={icon === "email" ? undefined : "noopener noreferrer"}
-      className={`group flex h-[54px] w-[54px] items-center justify-center rounded-full border shadow-[0_2px_5px_rgba(0,0,0,.06)] transition-all duration-200 hover:-translate-y-[2px] ${isStory ? "border-white/[.14] bg-[#181818] text-white/60 shadow-[0_3px_12px_rgba(0,0,0,.45)] hover:bg-[#222] hover:text-white" : "border-black/[.10] bg-white text-black/60 hover:text-black hover:shadow-[0_5px_14px_rgba(0,0,0,.10)]"}`}
+      className={`group flex h-[54px] w-[54px] items-center justify-center rounded-full border shadow-[0_2px_5px_rgba(0,0,0,.06)] transition-all duration-200 hover:-translate-y-[2px] ${
+        isStory
+          ? "border-white/[.14] bg-[#181818] text-white/60 shadow-[0_3px_12px_rgba(0,0,0,.45)] hover:bg-[#222] hover:text-white"
+          : "border-black/[.10] bg-white text-black/60 hover:text-black hover:shadow-[0_5px_14px_rgba(0,0,0,.10)]"
+      }`}
     >
       <SocialIcon type={icon} isStory={isStory} />
     </Link>
   );
 }
 
-function SocialIcon({ type, isStory }: { type: string; isStory: boolean }) {
+function SocialIcon({
+  type,
+  isStory,
+}: {
+  type: string;
+  isStory: boolean;
+}) {
   const iconColor = isStory ? "white" : "currentColor";
 
   if (type === "instagram") {

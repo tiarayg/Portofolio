@@ -93,11 +93,11 @@ export default function StoryHero() {
               className="font-serif text-[42px] font-normal leading-[.98] tracking-[-2px] text-white sm:text-[52px] md:text-[62px] lg:text-[68px]"
               style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}
             >
-              I create identities and websites
+              I enjoy turning ideas into
               <br />
-              giving your product its own voice,
+              clean, intuitive and functional
               <br />
-              the one your audience remembers
+              digital experiences
             </h1>
 
             {/* CTA */}

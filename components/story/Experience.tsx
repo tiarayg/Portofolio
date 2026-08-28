@@ -5,23 +5,23 @@ import Link from "next/link";
 const experiences = [
   {
     role: "Frontend Developer",
-    company: "Decodes AI",
-    period: "2025 – 2026",
-    type: "Internship",
+    company: "Decodes Media",
+    period: "Feb 2026 – Apr 2026",
+    type: "Part-time",
     icon: "D",
   },
   {
     role: "Frontend Developer Intern",
-    company: "Imajiku Cipta Media",
-    period: "2024",
+    company: "Decodes Media",
+    period: "Aug 2025 – Dec 2025",
     type: "Internship",
-    icon: "I",
+    icon: "D",
   },
 ];
 
 const education = [
   {
-    degree: "D3 Teknik Informatika",
+    degree: "D3 Informatics Engineering",
     school: "Politeknik Negeri Semarang",
     period: "2023 – 2026",
     icon: "🎓",
@@ -59,16 +59,16 @@ export default function Experience() {
 
               <div>
                 {experiences.map((item) => (
-                  <ExperienceItem key={item.company} {...item} />
+                  <ExperienceItem key={`${item.company}-${item.period}`} {...item} />
                 ))}
               </div>
             </div>
 
-            {/* ================= ACADEMIC ===================== */}
+            {/* ================= EDUCATION ==================== */}
             <div>
               <div className="px-[28px] pb-[18px] pt-[30px] sm:px-[34px]">
                 <h2 className="font-serif text-[21px] italic text-white/55">
-                  Background academy
+                  Education
                 </h2>
               </div>
 
@@ -82,7 +82,6 @@ export default function Experience() {
 
           {/* ==================================================
               RIGHT COLUMN
-              FULL HEIGHT
           ================================================== */}
           <div className="flex flex-col justify-center px-[28px] py-[45px] sm:px-[38px] md:px-[30px] lg:px-[38px]">
             <div className="max-w-[430px]">
@@ -95,33 +94,35 @@ export default function Experience() {
               {/* TEXT */}
               <div className="mt-[38px] space-y-[26px]">
                 <p className="text-[15px] leading-[1.55] text-white/85 sm:text-[16px]">
-                  I&apos;m a frontend developer who enjoys turning ideas and
-                  designs into thoughtful, responsive digital experiences.
+                  I&apos;m a frontend developer with experience building
+                  responsive websites and digital interfaces using modern web
+                  technologies.
                 </p>
 
                 <p className="text-[15px] leading-[1.55] text-white/85 sm:text-[16px]">
-                  My focus is on building interfaces that are clear,
-                  functional, and close to the original design while keeping
-                  the code clean and maintainable.
+                  I enjoy turning designs and ideas into functional products,
+                  while continuing to explore both frontend and mobile
+                  development through real projects and new challenges.
                 </p>
               </div>
 
               {/* DOWNLOAD CV */}
-              <Link
-                href="/cv/tiara-yoga-pratiwi-cv.pdf"
-                target="_blank"
-                className="group mt-[32px] inline-flex items-center gap-[10px] rounded-full border border-white/[0.15] bg-[#f5f5f5] px-[17px] py-[10px] text-[14px] text-black shadow-[0_3px_12px_rgba(255,255,255,.18)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white"
-              >
-                <span className="flex h-[20px] w-[20px] items-center justify-center rounded-[5px] bg-black/10 text-[11px]">
-                  ↓
-                </span>
+                <a
+                  href="/cv/TiaraYogaPratiwi-CV.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group mt-[32px] inline-flex items-center gap-[10px] rounded-full border border-white/[0.15] bg-[#f5f5f5] px-[17px] py-[10px] text-[14px] text-black shadow-[0_3px_12px_rgba(255,255,255,.18)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white"
+                >
+                  <span className="flex h-[20px] w-[20px] items-center justify-center rounded-[5px] bg-black/10 text-[11px]">
+                    ↓
+                  </span>
 
-                <span>Download my CV</span>
+                  <span>Download my CV</span>
 
-                <span className="text-[12px] transition-transform group-hover:translate-y-[1px]">
-                  ↓
-                </span>
-              </Link>
+                  <span className="text-[12px] transition-transform group-hover:translate-y-[1px]">
+                    ↓
+                  </span>
+                </a>
             </div>
           </div>
         </div>
@@ -164,17 +165,17 @@ function ExperienceItem({
         </p>
 
         <p className="mt-[3px] truncate text-[13px] text-white/40">
-          at {company}
+          {company}
         </p>
       </div>
 
       {/* PERIOD */}
       <div className="ml-4 text-right">
-        <p className="whitespace-nowrap text-[12px] text-white/40 sm:text-[13px]">
+        <p className="whitespace-nowrap text-[16px] text-white/70 sm:text-[13px]">
           {period}
         </p>
 
-        <p className="mt-[3px] text-[10px] text-white/20">
+        <p className="mt-[3px] text-[16px] text-white/50">
           {type}
         </p>
       </div>
