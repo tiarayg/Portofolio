@@ -5,11 +5,16 @@ import { useRouter } from "next/navigation";
 export default function Hero() {
   const router = useRouter();
 
+  const handleEmailClick = () => {
+    window.location.href =
+      "mailto:tiarapratiwi889@gmail.com?subject=New%20Project%20Inquiry";
+  };
+
   return (
     <section className="relative min-h-screen overflow-hidden">
-
       {/* MAIN CANVAS */}
       <div className="relative z-10 mx-auto min-h-screen w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x border-black/[0.08]">
+
         {/* YELLOW HALF CIRCLE */}
         <div
           className="pointer-events-none absolute left-1/2 top-[-450px] h-[850px] w-[1350px] -translate-x-1/2 rounded-full"
@@ -24,14 +29,17 @@ export default function Hero() {
               backgroundImage: `radial-gradient(circle, rgba(150,105,0,.36) .65px, transparent .8px), radial-gradient(circle, rgba(180,125,0,.24) .55px, transparent .8px)`,
               backgroundPosition: "0 0, 8px 11px",
               backgroundSize: "39px 43px, 31px 35px",
-              maskImage: "radial-gradient(ellipse at center, black 0%, black 50%, transparent 86%)",
-              WebkitMaskImage: "radial-gradient(ellipse at center, black 0%, black 50%, transparent 86%)",
+              maskImage:
+                "radial-gradient(ellipse at center, black 0%, black 50%, transparent 86%)",
+              WebkitMaskImage:
+                "radial-gradient(ellipse at center, black 0%, black 50%, transparent 86%)",
             }}
           />
         </div>
 
         {/* NAVBAR */}
         <header className="relative z-30 flex h-[62px] items-center justify-between border-b border-black/[0.08] bg-[#fafafa] px-[18px]">
+
           {/* NAME */}
           <button
             type="button"
@@ -43,6 +51,7 @@ export default function Hero() {
 
           {/* WORKS / STORY */}
           <div className="flex items-center rounded-full border border-black/[0.13] bg-[#f5f5f5] p-[2px] shadow-[0_1px_3px_rgba(0,0,0,.08)]">
+
             {/* WORKS ACTIVE */}
             <button
               type="button"
@@ -84,10 +93,13 @@ export default function Hero() {
         {/* HERO CONTENT */}
         <main className="relative z-20 flex min-h-[calc(100vh-62px)] flex-col justify-end px-[18px] pb-[50px] sm:pb-[58px] md:pb-[66px] lg:pb-[72px]">
           <div className="max-w-[930px] translate-y-[22px] sm:translate-y-[26px] md:translate-y-[30px] lg:translate-y-[35px]">
+
             {/* TITLE */}
             <h1
               className="font-serif text-[40px] font-normal leading-[1.01] tracking-[-1.9px] text-black sm:text-[47px] md:text-[54px] lg:text-[60px] xl:text-[64px]"
-              style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}
+              style={{
+                fontFamily: 'Georgia, "Times New Roman", Times, serif',
+              }}
             >
               Hey! I&apos;m Tiara - Bridging the gap
               <br className="hidden sm:block" />
@@ -98,9 +110,10 @@ export default function Hero() {
             {/* CTA */}
             <button
               type="button"
+              onClick={handleEmailClick}
               className="group mt-[27px] flex h-[47px] items-center gap-[10px] rounded-full border border-black/[0.09] bg-[#f5f5f5] px-[18px] text-[15px] text-black shadow-[0_1px_2px_rgba(0,0,0,.07),0_5px_15px_rgba(0,0,0,.05)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white hover:shadow-[0_4px_14px_rgba(0,0,0,.11)]"
             >
-              <span>Let&apos;s chat about new project</span>
+              <span>Let&apos;s chat about a new project</span>
 
               <span className="flex h-[18px] w-[18px] items-center justify-center transition-transform duration-200 group-hover:translate-x-[2px]">
                 <span className="ml-[2px] h-0 w-0 border-b-[5px] border-l-[7px] border-t-[5px] border-b-transparent border-l-black border-t-transparent" />
