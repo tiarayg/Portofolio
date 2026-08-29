@@ -1,11 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useRouter } from "next/navigation";
 
 export default function Hero() {
-  const router = useRouter();
-
   const handleEmailClick = () => {
     window.location.href =
       "mailto:tiarapratiwi889@gmail.com?subject=New%20Project%20Inquiry";
@@ -13,6 +10,7 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-screen overflow-hidden">
+
       {/* MAIN CANVAS */}
       <div className="relative z-10 mx-auto min-h-screen w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x border-black/[0.08]">
 
@@ -38,89 +36,8 @@ export default function Hero() {
           />
         </div>
 
-        {/* NAVBAR */}
-        <header className="relative z-30 flex h-[62px] items-center justify-between border-b border-black/[0.08] bg-[#fafafa] px-[18px]">
-
-          {/* NAME */}
-          <motion.button
-            type="button"
-            onClick={() => router.push("/")}
-            initial={{
-              opacity: 0,
-              y: -15,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1] as const,
-            }}
-            className="text-[25px] font-normal tracking-[-0.9px] text-black"
-          >
-            Tiara
-          </motion.button>
-
-          {/* WORKS / STORY */}
-          <motion.div
-            initial={{
-              opacity: 0,
-              y: -15,
-            }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              duration: 0.8,
-              delay: 0.08,
-              ease: [0.22, 1, 0.36, 1] as const,
-            }}
-            className="flex items-center rounded-full border border-black/[0.13] bg-[#f5f5f5] p-[2px] shadow-[0_1px_3px_rgba(0,0,0,.08)]"
-          >
-
-            {/* WORKS ACTIVE */}
-            <button
-              type="button"
-              onClick={() => router.push("/")}
-              className="flex h-[34px] items-center gap-[6px] rounded-full bg-[#151515] px-[12px] text-[14px] text-white shadow-[0_2px_7px_rgba(0,0,0,.25)]"
-            >
-              {/* SUN */}
-              <span className="relative flex h-[15px] w-[15px] items-center justify-center">
-                <span className="absolute h-[7px] w-[7px] rounded-full border-[1.5px] border-current" />
-                <span className="absolute left-1/2 top-[-1px] h-[3px] w-[1.5px] -translate-x-1/2 rounded-full bg-current" />
-                <span className="absolute bottom-[-1px] left-1/2 h-[3px] w-[1.5px] -translate-x-1/2 rounded-full bg-current" />
-                <span className="absolute left-[-1px] top-1/2 h-[1.5px] w-[3px] -translate-y-1/2 rounded-full bg-current" />
-                <span className="absolute right-[-1px] top-1/2 h-[1.5px] w-[3px] -translate-y-1/2 rounded-full bg-current" />
-                <span className="absolute left-[1px] top-[1px] h-[2px] w-[1px] rotate-[-45deg] bg-current" />
-                <span className="absolute right-[1px] top-[1px] h-[2px] w-[1px] rotate-[45deg] bg-current" />
-                <span className="absolute bottom-[1px] left-[1px] h-[2px] w-[1px] rotate-[45deg] bg-current" />
-                <span className="absolute bottom-[1px] right-[1px] h-[2px] w-[1px] rotate-[-45deg] bg-current" />
-              </span>
-
-              <span>Works</span>
-            </button>
-
-            {/* STORY */}
-            <button
-              type="button"
-              onClick={() => router.push("/story")}
-              className="flex h-[34px] items-center gap-[6px] rounded-full px-[12px] text-[14px] text-black/40 transition-all duration-200 hover:text-black/70"
-            >
-              {/* MOON */}
-              <span className="relative block h-[14px] w-[14px] overflow-hidden rounded-full bg-black/35">
-                <span className="absolute -right-[3px] -top-[3px] h-[12px] w-[12px] rounded-full bg-[#f5f5f5]" />
-              </span>
-
-              <span>Story</span>
-            </button>
-          </motion.div>
-        </header>
-
         {/* HERO CONTENT */}
-        <main className="relative z-20 flex min-h-[calc(100vh-62px)] flex-col justify-end px-[18px] pb-[50px] sm:pb-[58px] md:pb-[66px] lg:pb-[72px]">
-
+        <main className="relative z-20 flex min-h-screen flex-col justify-end px-[18px] pb-[50px] pt-[62px] sm:pb-[58px] md:pb-[66px] lg:pb-[72px]">
           <motion.div
             initial={{
               opacity: 0,
@@ -140,7 +57,6 @@ export default function Hero() {
             }}
             className="max-w-[930px] translate-y-[22px] sm:translate-y-[26px] md:translate-y-[30px] lg:translate-y-[35px]"
           >
-
             {/* TITLE */}
             <motion.h1
               initial={{
@@ -206,7 +122,6 @@ export default function Hero() {
                 <span className="ml-[2px] h-0 w-0 border-b-[5px] border-l-[7px] border-t-[5px] border-b-transparent border-l-black border-t-transparent" />
               </span>
             </motion.button>
-
           </motion.div>
         </main>
 

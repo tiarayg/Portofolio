@@ -104,7 +104,7 @@ function PolaroidStack() {
         {/* IMAGE */}
         <div className="h-[225px] w-full overflow-hidden bg-[#ddd] sm:h-[250px]">
           <img
-            src="/foto2.jpeg"
+            src="/tiara.png"
             alt="Tiara Yoga"
             className="h-full w-full object-cover"
           />
