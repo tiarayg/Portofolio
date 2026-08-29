@@ -31,7 +31,7 @@ export default function AboutMe() {
             <div className="mt-[40px] max-w-[650px] space-y-[26px]">
               <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
                 Hi, I&apos;m{" "}
-                <span className="text-white">Tiara Yoga</span> — a young
+                <span className="text-white">Tiara Yoga</span> a young
                 developer who enjoys turning ideas into digital experiences.
                 I&apos;ve always been curious about how something that starts
                 as a simple idea can eventually become a website or application
@@ -41,7 +41,7 @@ export default function AboutMe() {
               <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
                 That curiosity gradually led me into the world of frontend and
                 mobile development. I enjoy the process of taking an idea and
-                turning it into something real — building interfaces, creating
+                turning it into something realbuilding interfaces, creating
                 interactions, and making sure everything works smoothly across
                 different devices.
               </p>
@@ -63,7 +63,7 @@ export default function AboutMe() {
               <p className="text-[15px] leading-[1.65] tracking-[-0.2px] text-white/85 sm:text-[16px]">
                 I&apos;m still growing, still learning, and still figuring out
                 new things every day. But that&apos;s also what I enjoy most
-                about this journey — there is always something new to explore,
+                about this journey, there is always something new to explore,
                 build, and improve. With every project, I hope to keep becoming
                 a better developer while creating digital experiences that
                 people can genuinely enjoy using.
