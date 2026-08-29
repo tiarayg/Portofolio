@@ -13,9 +13,9 @@ const projects = [
   },
   {
     id: 2,
-    slug: "project-two",
-    title: "Project Two",
-    image: "/projects/project-2.jpg",
+    slug: "cafetarian",
+    title: "Cafetarian POS",
+    image: "/cafetarian/cafetarian.png",
     tags: ["Branding", "Platform design"],
   },
   {
