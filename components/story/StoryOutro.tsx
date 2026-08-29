@@ -1,5 +1,7 @@
 "use client";
 
+import { motion } from "framer-motion";
+
 export default function StoryOutro() {
   return (
     <section className="relative overflow-hidden bg-black text-white">
@@ -30,24 +32,63 @@ export default function StoryOutro() {
           {/* =================================================
               HEADLINE
           ================================================= */}
-          <div className="absolute bottom-[45px] left-[28px] z-20 sm:bottom-[55px] sm:left-[36px] md:bottom-[58px] md:left-[40px]">
-            <p className="mb-5 text-[11px] uppercase tracking-[0.22em] text-white/40">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3 }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            className="absolute bottom-[45px] left-[28px] z-20 sm:bottom-[55px] sm:left-[36px] md:bottom-[58px] md:left-[40px]"
+          >
+            <motion.p
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3 }}
+              transition={{
+                duration: 0.6,
+                delay: 0.1,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mb-5 text-[11px] uppercase tracking-[0.22em] text-white/40"
+            >
               What&apos;s next?
-            </p>
+            </motion.p>
 
-            <h2 className="max-w-[620px] font-serif text-[48px] font-normal leading-[.94] tracking-[-2.5px] text-white sm:text-[60px] md:text-[68px] lg:text-[74px]">
+            <motion.h2
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3 }}
+              transition={{
+                duration: 0.9,
+                delay: 0.15,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="max-w-[620px] font-serif text-[48px] font-normal leading-[.94] tracking-[-2.5px] text-white sm:text-[60px] md:text-[68px] lg:text-[74px]"
+            >
               Ready for the
               <br />
               <span className="text-white/45">
                 next adventures.
               </span>
-            </h2>
+            </motion.h2>
 
-            <p className="mt-6 max-w-[390px] text-[14px] leading-[1.65] text-white/50 sm:text-[15px]">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ amount: 0.3 }}
+              transition={{
+                duration: 0.7,
+                delay: 0.3,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="mt-6 max-w-[390px] text-[14px] leading-[1.65] text-white/50 sm:text-[15px]"
+            >
               Still learning, still building, and always excited to see
               where the next idea takes me.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
 
           {/* =================================================
               FLOWERS
@@ -55,85 +96,233 @@ export default function StoryOutro() {
           <div className="absolute right-[3%] top-[45px] hidden h-[520px] w-[650px] sm:block">
 
             {/* BIG PINK FLOWER */}
-            <div className="absolute right-[60px] top-[0px]">
+            <AnimatedFlower
+              className="absolute right-[60px] top-[0px]"
+              delay={0.1}
+              y={8}
+              rotate={3}
+            >
               <Flower
                 size="large"
                 petalColor="bg-[#e879aa]"
                 centerColor="bg-[#ffd76a]"
               />
-            </div>
+            </AnimatedFlower>
 
             {/* PURPLE FLOWER */}
-            <div className="absolute left-[150px] top-[75px]">
+            <AnimatedFlower
+              className="absolute left-[150px] top-[75px]"
+              delay={0.25}
+              y={7}
+              rotate={-4}
+            >
               <Flower
                 size="medium"
                 petalColor="bg-[#9580e8]"
                 centerColor="bg-[#ffc928]"
               />
-            </div>
+            </AnimatedFlower>
 
             {/* BIG BLUE FLOWER */}
-            <div className="absolute right-[20px] top-[260px]">
+            <AnimatedFlower
+              className="absolute right-[20px] top-[260px]"
+              delay={0.4}
+              y={10}
+              rotate={3}
+            >
               <Flower
                 size="medium"
                 petalColor="bg-[#5fa5e0]"
                 centerColor="bg-[#ffc928]"
               />
-            </div>
+            </AnimatedFlower>
 
             {/* ORANGE FLOWER */}
-            <div className="absolute left-[270px] top-[315px]">
+            <AnimatedFlower
+              className="absolute left-[270px] top-[315px]"
+              delay={0.55}
+              y={7}
+              rotate={-3}
+            >
               <Flower
                 size="small"
                 petalColor="bg-[#ff9d6b]"
                 centerColor="bg-[#ffe07a]"
               />
-            </div>
+            </AnimatedFlower>
 
             {/* SMALL PINK FLOWER */}
-            <div className="absolute left-[90px] top-[410px]">
+            <AnimatedFlower
+              className="absolute left-[90px] top-[410px]"
+              delay={0.7}
+              y={6}
+              rotate={4}
+            >
               <Flower
                 size="small"
                 petalColor="bg-[#ec83b1]"
                 centerColor="bg-[#ffe07a]"
               />
-            </div>
+            </AnimatedFlower>
 
-            {/* DECORATIVE DOTS */}
-            <span className="absolute left-[8%] top-[5%] h-[4px] w-[4px] rounded-full bg-[#e879aa]" />
+            {/* =================================================
+                DECORATIVE DOTS
+            ================================================= */}
+            <AnimatedDot
+              className="absolute left-[8%] top-[5%] h-[4px] w-[4px] rounded-full bg-[#e879aa]"
+              delay={0.2}
+            />
 
-            <span className="absolute left-[42%] top-[12%] h-[7px] w-[7px] rounded-full bg-[#e879aa]" />
+            <AnimatedDot
+              className="absolute left-[42%] top-[12%] h-[7px] w-[7px] rounded-full bg-[#e879aa]"
+              delay={0.35}
+            />
 
-            <span className="absolute right-[5%] top-[8%] h-[6px] w-[6px] rounded-full bg-[#5fa5e0]" />
+            <AnimatedDot
+              className="absolute right-[5%] top-[8%] h-[6px] w-[6px] rounded-full bg-[#5fa5e0]"
+              delay={0.5}
+            />
 
-            <span className="absolute left-[35%] top-[52%] h-[5px] w-[5px] rounded-full bg-[#9580e8]" />
+            <AnimatedDot
+              className="absolute left-[35%] top-[52%] h-[5px] w-[5px] rounded-full bg-[#9580e8]"
+              delay={0.65}
+            />
 
-            <span className="absolute right-[35%] top-[78%] h-[5px] w-[5px] rounded-full bg-[#e879aa]" />
+            <AnimatedDot
+              className="absolute right-[35%] top-[78%] h-[5px] w-[5px] rounded-full bg-[#e879aa]"
+              delay={0.8}
+            />
 
-            <span className="absolute right-[8%] bottom-[2%] h-[7px] w-[7px] rounded-full bg-[#ffd76a]" />
+            <AnimatedDot
+              className="absolute right-[8%] bottom-[2%] h-[7px] w-[7px] rounded-full bg-[#ffd76a]"
+              delay={0.95}
+            />
 
-            <span className="absolute left-[20%] bottom-[4%] h-[6px] w-[6px] rounded-full bg-[#ffd76a]" />
+            <AnimatedDot
+              className="absolute left-[20%] bottom-[4%] h-[6px] w-[6px] rounded-full bg-[#ffd76a]"
+              delay={1.1}
+            />
           </div>
 
           {/* =================================================
               MOBILE FLOWERS
           ================================================= */}
           <div className="absolute right-[20px] top-[35px] flex gap-3 sm:hidden">
-            <Flower
-              size="small"
-              petalColor="bg-[#e879aa]"
-              centerColor="bg-[#ffd76a]"
-            />
+            <AnimatedFlower delay={0.1} y={6} rotate={3}>
+              <Flower
+                size="small"
+                petalColor="bg-[#e879aa]"
+                centerColor="bg-[#ffd76a]"
+              />
+            </AnimatedFlower>
 
-            <Flower
-              size="small"
-              petalColor="bg-[#9580e8]"
-              centerColor="bg-[#ffc928]"
-            />
+            <AnimatedFlower delay={0.25} y={7} rotate={-3}>
+              <Flower
+                size="small"
+                petalColor="bg-[#9580e8]"
+                centerColor="bg-[#ffc928]"
+              />
+            </AnimatedFlower>
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+/* =========================================================
+   ANIMATED FLOWER
+========================================================= */
+
+function AnimatedFlower({
+  children,
+  className = "",
+  delay = 0,
+  y = 8,
+  rotate = 3,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  delay?: number;
+  y?: number;
+  rotate?: number;
+}) {
+  return (
+    <motion.div
+      className={className}
+      initial={{
+        opacity: 0,
+        scale: 0.7,
+        y: 30,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+        y: 0,
+      }}
+      viewport={{
+        amount: 0.2,
+        once: false,
+      }}
+      transition={{
+        duration: 0.8,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    >
+      <motion.div
+        animate={{
+          y: [0, -y, 0],
+          rotate: [0, rotate, 0],
+        }}
+        transition={{
+          duration: 5 + delay,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+      >
+        {children}
+      </motion.div>
+    </motion.div>
+  );
+}
+
+/* =========================================================
+   ANIMATED DOT
+========================================================= */
+
+function AnimatedDot({
+  className,
+  delay = 0,
+}: {
+  className: string;
+  delay?: number;
+}) {
+  return (
+    <motion.span
+      className={className}
+      initial={{
+        opacity: 0,
+        scale: 0,
+      }}
+      whileInView={{
+        opacity: 1,
+        scale: 1,
+      }}
+      animate={{
+        y: [0, -5, 0],
+        opacity: [0.5, 1, 0.5],
+      }}
+      viewport={{
+        amount: 0.2,
+        once: false,
+      }}
+      transition={{
+        duration: 0.5,
+        delay,
+        ease: [0.22, 1, 0.36, 1],
+      }}
+    />
   );
 }
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 export default function Hero() {
@@ -41,16 +42,43 @@ export default function Hero() {
         <header className="relative z-30 flex h-[62px] items-center justify-between border-b border-black/[0.08] bg-[#fafafa] px-[18px]">
 
           {/* NAME */}
-          <button
+          <motion.button
             type="button"
             onClick={() => router.push("/")}
+            initial={{
+              opacity: 0,
+              y: -15,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1] as const,
+            }}
             className="text-[25px] font-normal tracking-[-0.9px] text-black"
           >
             Tiara
-          </button>
+          </motion.button>
 
           {/* WORKS / STORY */}
-          <div className="flex items-center rounded-full border border-black/[0.13] bg-[#f5f5f5] p-[2px] shadow-[0_1px_3px_rgba(0,0,0,.08)]">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -15,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.08,
+              ease: [0.22, 1, 0.36, 1] as const,
+            }}
+            className="flex items-center rounded-full border border-black/[0.13] bg-[#f5f5f5] p-[2px] shadow-[0_1px_3px_rgba(0,0,0,.08)]"
+          >
 
             {/* WORKS ACTIVE */}
             <button
@@ -87,15 +115,51 @@ export default function Hero() {
 
               <span>Story</span>
             </button>
-          </div>
+          </motion.div>
         </header>
 
         {/* HERO CONTENT */}
         <main className="relative z-20 flex min-h-[calc(100vh-62px)] flex-col justify-end px-[18px] pb-[50px] sm:pb-[58px] md:pb-[66px] lg:pb-[72px]">
-          <div className="max-w-[930px] translate-y-[22px] sm:translate-y-[26px] md:translate-y-[30px] lg:translate-y-[35px]">
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              amount: 0.3,
+              once: false,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1] as const,
+            }}
+            className="max-w-[930px] translate-y-[22px] sm:translate-y-[26px] md:translate-y-[30px] lg:translate-y-[35px]"
+          >
 
             {/* TITLE */}
-            <h1
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 35,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                amount: 0.3,
+                once: false,
+              }}
+              transition={{
+                duration: 0.9,
+                delay: 0.15,
+                ease: [0.22, 1, 0.36, 1] as const,
+              }}
               className="font-serif text-[40px] font-normal leading-[1.01] tracking-[-1.9px] text-black sm:text-[47px] md:text-[54px] lg:text-[60px] xl:text-[64px]"
               style={{
                 fontFamily: 'Georgia, "Times New Roman", Times, serif',
@@ -105,12 +169,35 @@ export default function Hero() {
               <br className="hidden sm:block" />
               between thoughtful design and clean,
               interactive code.
-            </h1>
+            </motion.h1>
 
             {/* CTA */}
-            <button
+            <motion.button
               type="button"
               onClick={handleEmailClick}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                amount: 0.3,
+                once: false,
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
+                ease: [0.22, 1, 0.36, 1] as const,
+              }}
+              whileHover={{
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.98,
+              }}
               className="group mt-[27px] flex h-[47px] items-center gap-[10px] rounded-full border border-black/[0.09] bg-[#f5f5f5] px-[18px] text-[15px] text-black shadow-[0_1px_2px_rgba(0,0,0,.07),0_5px_15px_rgba(0,0,0,.05)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white hover:shadow-[0_4px_14px_rgba(0,0,0,.11)]"
             >
               <span>Let&apos;s chat about a new project</span>
@@ -118,8 +205,9 @@ export default function Hero() {
               <span className="flex h-[18px] w-[18px] items-center justify-center transition-transform duration-200 group-hover:translate-x-[2px]">
                 <span className="ml-[2px] h-0 w-0 border-b-[5px] border-l-[7px] border-t-[5px] border-b-transparent border-l-black border-t-transparent" />
               </span>
-            </button>
-          </div>
+            </motion.button>
+
+          </motion.div>
         </main>
 
         {/* CANVAS BORDERS */}

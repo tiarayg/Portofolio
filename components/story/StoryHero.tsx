@@ -1,5 +1,6 @@
 "use client";
 
+import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
 export default function StoryHero() {
@@ -34,19 +35,48 @@ export default function StoryHero() {
 
       {/* MAIN CANVAS */}
       <div className="relative z-10 mx-auto min-h-screen w-[calc(100%-48px)] max-w-[1200px] overflow-hidden border-x border-white/[0.10]">
+
         {/* NAVBAR */}
         <header className="relative z-30 flex h-[62px] items-center justify-between border-b border-white/[0.10] bg-black px-[18px]">
+
           {/* NAME */}
-          <button
+          <motion.button
             type="button"
             onClick={() => router.push("/")}
+            initial={{
+              opacity: 0,
+              y: -15,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1] as const,
+            }}
             className="text-[25px] font-normal tracking-[-0.9px] text-white"
           >
             Tiara
-          </button>
+          </motion.button>
 
           {/* SWITCH */}
-          <div className="flex items-center rounded-full border border-white/[0.15] bg-white/[0.06] p-[2px] shadow-[0_1px_5px_rgba(0,0,0,.4)]">
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: -15,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.08,
+              ease: [0.22, 1, 0.36, 1] as const,
+            }}
+            className="flex items-center rounded-full border border-white/[0.15] bg-white/[0.06] p-[2px] shadow-[0_1px_5px_rgba(0,0,0,.4)]"
+          >
             {/* WORKS */}
             <button
               type="button"
@@ -82,28 +112,91 @@ export default function StoryHero() {
 
               <span>Story</span>
             </button>
-          </div>
+          </motion.div>
         </header>
 
         {/* HERO CONTENT */}
         <main className="relative z-20 flex min-h-[calc(100vh-62px)] flex-col justify-end px-[18px] pb-[55px] sm:pb-[65px] md:pb-[75px] lg:pb-[85px]">
-          <div className="max-w-[1100px] translate-y-[15px] sm:translate-y-[20px] md:translate-y-[25px]">
+
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 40,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+            }}
+            viewport={{
+              amount: 0.3,
+              once: false,
+            }}
+            transition={{
+              duration: 0.8,
+              ease: [0.22, 1, 0.36, 1] as const,
+            }}
+            className="max-w-[1100px] translate-y-[15px] sm:translate-y-[20px] md:translate-y-[25px]"
+          >
+
             {/* TITLE */}
-            <h1
+            <motion.h1
+              initial={{
+                opacity: 0,
+                y: 35,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                amount: 0.3,
+                once: false,
+              }}
+              transition={{
+                duration: 0.9,
+                delay: 0.15,
+                ease: [0.22, 1, 0.36, 1] as const,
+              }}
               className="font-serif text-[42px] font-normal leading-[.98] tracking-[-2px] text-white sm:text-[52px] md:text-[62px] lg:text-[68px]"
-              style={{ fontFamily: 'Georgia, "Times New Roman", Times, serif' }}
+              style={{
+                fontFamily:
+                  'Georgia, "Times New Roman", Times, serif',
+              }}
             >
               I enjoy turning ideas into
               <br />
               clean, intuitive and functional
               <br />
               digital experiences
-            </h1>
+            </motion.h1>
 
             {/* CTA */}
-            <button
+            <motion.button
               type="button"
               onClick={() => router.push("/#contact")}
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                amount: 0.3,
+                once: false,
+              }}
+              transition={{
+                duration: 0.8,
+                delay: 0.3,
+                ease: [0.22, 1, 0.36, 1] as const,
+              }}
+              whileHover={{
+                y: -2,
+              }}
+              whileTap={{
+                scale: 0.98,
+              }}
               className="group mt-[30px] flex h-[47px] items-center gap-[10px] rounded-full border border-black/[0.15] bg-[#f5f5f5] px-[18px] text-[15px] text-black shadow-[0_1px_2px_rgba(0,0,0,.25),0_5px_15px_rgba(0,0,0,.15)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white hover:shadow-[0_4px_14px_rgba(0,0,0,.25)]"
             >
               <span>Start a project with me</span>
@@ -111,8 +204,9 @@ export default function StoryHero() {
               <span className="flex h-[18px] w-[18px] items-center justify-center transition-transform duration-200 group-hover:translate-x-[2px]">
                 <span className="ml-[2px] h-0 w-0 border-b-[5px] border-l-[7px] border-t-[5px] border-b-transparent border-l-black border-t-transparent" />
               </span>
-            </button>
-          </div>
+            </motion.button>
+
+          </motion.div>
         </main>
 
         {/* CANVAS BORDERS */}
