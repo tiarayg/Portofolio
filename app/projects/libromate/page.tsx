@@ -38,7 +38,6 @@ export default function LibromateProjectPage() {
           "Frontend Development",
           "API Integration",
           "User Interface Development",
-          "Profile Management",
           "State Management",
         ]}
         tools={[
@@ -46,8 +45,9 @@ export default function LibromateProjectPage() {
           "Dart",
           "Laravel",
           "REST API",
-          "GetX",
-          "SharedPreferences",
+          "MYSQL",
+          "Git",
+          "GitLab",
           "Figma",
         ]}
       />

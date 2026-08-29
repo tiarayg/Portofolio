@@ -38,7 +38,6 @@ export default function HospitalInternProjectPage() {
           "Backend Development",
           "Database Management",
           "Information System Development",
-          "Data Management",
           "Excel Export",
         ]}
         tools={[
@@ -50,8 +49,9 @@ export default function HospitalInternProjectPage() {
           "CSS",
           "Bootstrap",
           "JavaScript",
-          "Maatwebsite Excel",
           "Figma",
+          "Git",
+          "GitHub",
         ]}
       />
 

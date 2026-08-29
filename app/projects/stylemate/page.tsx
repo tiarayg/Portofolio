@@ -54,6 +54,8 @@ export default function StylemateProjectPage() {
           "Byteplus AI",
           "PostgreSQL",
           "Supabase",
+          "Git",
+          "Github",
         ]}
       />
 

@@ -37,7 +37,6 @@ export default function SerelioProjectPage() {
           "User Flow",
           "Wireframing",
           "Interface Design",
-          "User-Centered Design",
           "Visual Design",
         ]}
         tools={[

@@ -35,17 +35,6 @@ export default function ProjectDetailHero({
             <span>Back</span>
           </Link>
 
-          {/* CHAT */}
-          <Link
-            href="mailto:your@email.com"
-            className="group inline-flex items-center gap-[7px] rounded-full border border-black/[0.25] bg-[#171717] px-[16px] py-[8px] text-[14px] text-white shadow-[0_4px_12px_rgba(0,0,0,.3)] transition-all hover:-translate-y-[1px] hover:bg-black"
-          >
-            <span>Let&apos;s chat</span>
-
-            <span className="text-[11px] text-white/60 transition-transform group-hover:translate-x-[2px]">
-              →
-            </span>
-          </Link>
         </div>
 
         {/* HERO CONTENT */}

@@ -39,16 +39,14 @@ export default function CafetarianProjectPage() {
           "Frontend Development",
           "Cafe Management System",
           "Payment Integration",
-          "Dashboard Development",
+          "Responsive Interface",
+
         ]}
         tools={[
-          "Next.js",
-          "React",
+          "Vue.js",
           "Tailwind CSS",
-          "JavaScript",
           "Git",
           "GitHub",
-          "Figma",
         ]}
       />
 
