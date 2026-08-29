@@ -173,7 +173,10 @@ export default function StoryHero() {
             {/* CTA */}
             <motion.button
               type="button"
-              onClick={() => router.push("/#contact")}
+              onClick={() =>
+                (window.location.href =
+                  "mailto:tiarapratiwi889@gmail.com?subject=New%20Project%20Inquiry")
+              }
               initial={{
                 opacity: 0,
                 y: 20,
