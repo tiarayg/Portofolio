@@ -44,7 +44,7 @@ export default function Projects() {
         {/* TAGLINE */}
         <div className="border-y border-black/[0.12] bg-[#fafafa] px-[18px] py-[22px] sm:px-[28px] sm:py-[24px]">
           <p className="font-serif text-[18px] italic leading-[1.35] tracking-[-.3px] text-black/55 sm:text-[20px] md:text-[21px]">
-            1+ year in frontend & mobile development. Building modern,
+            1+ year in Web Developer, frontend & mobile development. Building modern,
             performant interfaces with clean code and high visual fidelity.
           </p>
         </div>

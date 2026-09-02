@@ -108,7 +108,7 @@ export default function Experience() {
 
               {/* DOWNLOAD CV */}
                 <a
-                  href="/cv/TiaraYogaPratiwi-CV.pdf"
+                  href="/cv/CV-TiaraYogaPratiwi.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group mt-[32px] inline-flex items-center gap-[10px] rounded-full border border-white/[0.15] bg-[#f5f5f5] px-[17px] py-[10px] text-[14px] text-black shadow-[0_3px_12px_rgba(255,255,255,.18)] transition-all duration-200 hover:-translate-y-[1px] hover:bg-white"
