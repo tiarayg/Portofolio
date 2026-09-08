@@ -12,7 +12,6 @@ export default function ProjectDocumentation({
 }: ProjectDocumentationProps) {
   return (
     <section className="relative overflow-hidden">
-
       {/* CONTAINER */}
       <div className="mx-auto w-[calc(100%-48px)] max-w-[1200px] border-x border-black/[0.08] bg-[#fafafa]">
 
@@ -26,36 +25,52 @@ export default function ProjectDocumentation({
         {/* GALLERY */}
         <div className="space-y-[12px] px-[18px] py-[18px] sm:px-[28px] sm:py-[24px] md:px-[30px]">
 
-          {/* IMAGE 1 */}
-          <DocumentationImage
-            src={images[0].src}
-            alt={images[0].alt}
-            className="aspect-[16/8]"
-          />
+          {images.map((image, index) => {
+            // Setiap 3 gambar:
+            // gambar pertama = full width
+            // gambar kedua + ketiga = 2 columns
+            if (index % 3 === 0) {
+              return (
+                <DocumentationImage
+                  key={`${image.src}-${index}`}
+                  src={image.src}
+                  alt={image.alt}
+                  className="aspect-[16/8]"
+                />
+              );
+            }
 
-          {/* IMAGE 2 + 3 */}
-          <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2">
-            <DocumentationImage
-              src={images[1].src}
-              alt={images[1].alt}
-              className="aspect-[4/3]"
-            />
+            // Gambar kedua dan ketiga masuk ke row
+            if (index % 3 === 1) {
+              const nextImage = images[index + 1];
 
-            <DocumentationImage
-              src={images[2].src}
-              alt={images[2].alt}
-              className="aspect-[4/3]"
-            />
-          </div>
+              return (
+                <div
+                  key={`${image.src}-${index}`}
+                  className="grid grid-cols-1 gap-[12px] md:grid-cols-2"
+                >
+                  <DocumentationImage
+                    src={image.src}
+                    alt={image.alt}
+                    className="aspect-[4/3]"
+                  />
 
-          {/* IMAGE 4 */}
-          {images[3] && (
-            <DocumentationImage
-              src={images[3].src}
-              alt={images[3].alt}
-              className="aspect-[16/8]"
-            />
-          )}
+                  {nextImage && (
+                    <DocumentationImage
+                      src={nextImage.src}
+                      alt={nextImage.alt}
+                      className="aspect-[4/3]"
+                    />
+                  )}
+                </div>
+              );
+            }
+
+            // index % 3 === 2 sudah dirender
+            // bersama gambar sebelumnya
+            return null;
+          })}
+
         </div>
 
         {/* BOTTOM BORDER */}

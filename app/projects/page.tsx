@@ -17,7 +17,7 @@ const projects = [
     slug: "cafetarian",
     title: "Cafetarian",
     image: "/cafetarian/cafetarian.png",
-    tags: ["SASS", "Story", "Documentation"],
+    tags: ["SasS", "Story", "Documentation"],
   },
   {
     id: 3,

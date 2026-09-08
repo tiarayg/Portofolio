@@ -43,6 +43,8 @@ export default function CafetarianProjectPage() {
 
         ]}
         tools={[
+          "React Native",
+          "Expo",
           "Vue.js",
           "Tailwind CSS",
           "Git",
@@ -54,20 +56,28 @@ export default function CafetarianProjectPage() {
       <ProjectDocumentation
         images={[
           {
-            src: "/cafetarian/placeholder.png",
+            src: "/cafetarian/cafetarian3.png",
             alt: "Cafetarian POS documentation 01",
           },
           {
-            src: "/cafetarian/placeholder.png",
+            src: "/cafetarian/cafetarian2.png",
             alt: "Cafetarian POS documentation 02",
           },
           {
-            src: "/cafetarian/placeholder.png",
+            src: "/cafetarian/cafetarian4.png",
             alt: "Cafetarian POS documentation 03",
           },
           {
-            src: "/cafetarian/placeholder.png",
+            src: "/cafetarian/cafetarian5.png",
             alt: "Cafetarian POS documentation 04",
+          },
+          {
+            src: "/cafetarian/cafetarian6.png",
+            alt: "Cafetarian POS documentation 05",
+          },
+          {
+            src: "/cafetarian/cafetarian8.png",
+            alt: "Cafetarian POS documentation 06",
           },
         ]}
       />
