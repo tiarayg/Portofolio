@@ -50,6 +50,12 @@ export default function DecAiProjectPage() {
           "GitHub",
           "Figma",
         ]}
+        projectLinks={[
+          {
+            label: "GitHub",
+            url: "https://github.com/tiarayg/web-decodes",
+          },
+        ]}
       />
 
       {/* DOCUMENTATION */}

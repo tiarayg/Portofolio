@@ -53,6 +53,13 @@ export default function HospitalInternProjectPage() {
           "Git",
           "GitHub",
         ]}
+
+        projectLinks={[
+          {
+            label: "GitHub",
+            url: "https://github.com/tiarayg/hospital_intern",
+          },
+        ]}
       />
 
       {/* DOCUMENTATION */}

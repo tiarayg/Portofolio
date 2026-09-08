@@ -40,7 +40,6 @@ export default function CafetarianProjectPage() {
           "Cafe Management System",
           "Payment Integration",
           "Responsive Interface",
-
         ]}
         tools={[
           "React Native",
@@ -49,6 +48,12 @@ export default function CafetarianProjectPage() {
           "Tailwind CSS",
           "Git",
           "GitHub",
+        ]}
+        projectLinks={[
+          {
+            label: "GitHub",
+            url: "https://github.com/Cafetarian-ID",
+          },
         ]}
       />
 

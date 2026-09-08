@@ -1,13 +1,19 @@
+
 type ProjectStoryProps = {
   paragraphs: string[];
   services: string[];
   tools: string[];
+  projectLinks?: {
+    label: string;
+    url: string;
+  }[];
 };
 
 export default function ProjectStory({
   paragraphs,
   services,
   tools,
+  projectLinks = [],
 }: ProjectStoryProps) {
   return (
     <section className="relative overflow-hidden">
@@ -34,7 +40,7 @@ export default function ProjectStory({
             </div>
           </div>
 
-          {/* SERVICES + TOOLS */}
+          {/* SERVICES + TOOLS + LINK PROJECT */}
           <div className="px-[28px] py-[30px] sm:px-[38px] sm:py-[36px] md:px-[30px] lg:px-[30px]">
             
             {/* SERVICES */}
@@ -62,6 +68,35 @@ export default function ProjectStory({
                 ))}
               </div>
             </div>
+
+            {/* LINK PROJECT */}
+            {projectLinks.length > 0 && (
+              <div className="mt-[50px]">
+                <h2 className="font-serif text-[34px] leading-none tracking-[-1.5px]">
+                  Link Project
+                </h2>
+
+                <div className="mt-[28px] flex flex-col items-start gap-[10px]">
+                  {projectLinks.map((link) => (
+                    <a
+                      key={link.label}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-[6px] text-[15px] text-black/80 transition-opacity hover:opacity-50"
+                    >
+                      <span className="underline underline-offset-[4px]">
+                        {link.label}
+                      </span>
+
+                      <span className="transition-transform duration-300 group-hover:-translate-y-[2px] group-hover:translate-x-[2px]">
+                        ↗
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -79,3 +114,4 @@ function Tag({ children }: { children: string }) {
     </span>
   );
 }
+

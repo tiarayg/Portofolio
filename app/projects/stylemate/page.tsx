@@ -57,6 +57,13 @@ export default function StylemateProjectPage() {
           "Git",
           "Github",
         ]}
+
+        projectLinks={[
+          {
+            label: "GitHub",
+            url: "https://github.com/styloartificial",
+          },
+        ]}
       />
 
       {/* DOCUMENTATION */}

@@ -47,6 +47,13 @@ export default function SerelioProjectPage() {
           "Wireframing",
           "Prototyping",
         ]}
+
+        projectLinks={[
+          {
+            label: "Figma",
+            url: "https://www.figma.com/design/aFAtPOqDcB5cVXhfdqpQPr/Serelio-Design-File---TUBES?node-id=1-4&p=f&t=Ybq5j3OfM0QbXgEj-0",
+          },
+        ]}
       />
 
       {/* DOCUMENTATION */}

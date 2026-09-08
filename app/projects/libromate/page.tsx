@@ -50,6 +50,13 @@ export default function LibromateProjectPage() {
           "GitLab",
           "Figma",
         ]}
+
+        projectLinks={[
+          {
+            label: "GitLab",
+            url: "https://gitlab.com/tiarapratiwi889/libromate",
+          },
+        ]}
       />
 
       {/* DOCUMENTATION */}
