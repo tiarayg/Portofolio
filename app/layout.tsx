@@ -20,7 +20,7 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tiara — Portofolio",
+  title: "Tiara Yoga Pratiwi",
   description:
     "Frontend Developer building modern web, mobile, and AI-powered experiences.",
 };
