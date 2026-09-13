@@ -13,13 +13,6 @@ const projects = [
     tags: ["Mobile App", "Story", "Documentation"],
   },
   {
-    id: 2,
-    slug: "cafetarian",
-    title: "Cafetarian",
-    image: "/cafetarian/cafetarian.png",
-    tags: ["SasS", "Story", "Documentation"],
-  },
-  {
     id: 3,
     slug: "dec-ai",
     title: "Decodes AI",

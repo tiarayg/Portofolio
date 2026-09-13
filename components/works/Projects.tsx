@@ -13,13 +13,6 @@ const projects = [
   },
   {
     id: 2,
-    slug: "cafetarian",
-    title: "Cafetarian POS",
-    image: "/cafetarian/cafetarian.png",
-    tags: ["SasS", "Story", "Documentation"],
-  },
-  {
-    id: 3,
     slug: "dec-ai",
     title: "Decodes AI",
     image: "/dec-ai/dec-ai.png",
@@ -27,7 +20,7 @@ const projects = [
   },
 
   {
-    id: 4,
+    id: 3,
     slug: "hospital-intern",
     title: "Hospital Intern",
     image: "/hospital-intern/hospital.png",
